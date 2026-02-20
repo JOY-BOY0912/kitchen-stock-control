@@ -8,9 +8,10 @@ export interface InventoryItem {
 const API_BASE = "https://n8n.srv1302157.hstgr.cloud/webhook";
 
 export async function fetchInventory(): Promise<InventoryItem[]> {
-  const res = await fetch(`${API_BASE}/get-inventory`);
+  const res = await fetch(`${API_BASE}/menu`);
   if (!res.ok) throw new Error("Failed to fetch inventory");
-  return res.json();
+  const data = await res.json();
+  return Array.isArray(data) ? data : [data];
 }
 
 export async function updateInventoryStatus(
