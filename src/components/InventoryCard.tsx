@@ -14,7 +14,7 @@ const InventoryCard = ({ item, onToggle, isToggling }: InventoryCardProps) => {
   const newStatus = isAvailable ? "Out of Stock" : "Available";
 
   return (
-    <div className="glass-card p-5 flex flex-col sm:flex-row sm:items-center gap-4 transition-all duration-300 hover:shadow-md hover:border-muted-foreground/20">
+    <div className="glass-card p-6 flex flex-col sm:flex-row sm:items-center gap-4 transition-all duration-300 hover:shadow-lg hover:border-primary/15">
       {/* Icon */}
       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-muted flex items-center justify-center">
         <UtensilsCrossed className="w-6 h-6 text-muted-foreground" />
@@ -24,7 +24,7 @@ const InventoryCard = ({ item, onToggle, isToggling }: InventoryCardProps) => {
       <div className="flex-1 min-w-0">
         <h3 className="font-display text-foreground truncate">{item.food_item}</h3>
         <p className="text-lg font-serif font-light text-primary mt-0.5">
-          ${item.price.toFixed(2)}
+          ₹{item.price.toFixed(2)}
         </p>
       </div>
 

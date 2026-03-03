@@ -19,7 +19,7 @@ const StatsBar = ({ items }: StatsBarProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {stats.map((stat) => (
-        <div key={stat.label} className="glass-card p-5 flex items-center gap-4 transition-all duration-300 hover:shadow-md">
+        <div key={stat.label} className="glass-card p-6 flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:border-primary/15">
           <div className={`p-3 rounded-lg bg-muted ${stat.color}`}>
             <stat.icon className="w-5 h-5" />
           </div>
