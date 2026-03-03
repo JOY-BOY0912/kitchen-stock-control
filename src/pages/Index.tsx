@@ -9,14 +9,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
+        <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-5 flex items-center gap-3">
           <div className="p-2 rounded-lg bg-primary/10">
             <LayoutDashboard className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-foreground">Inventory Management</h1>
-            <p className="text-sm text-muted-foreground">Manage item availability</p>
+            <h1 className="text-xl font-serif font-light text-foreground tracking-wide">Inventory Management</h1>
+            <p className="text-sm text-muted-foreground font-sans">Manage item availability</p>
           </div>
         </div>
       </header>

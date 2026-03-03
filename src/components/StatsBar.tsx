@@ -12,20 +12,20 @@ const StatsBar = ({ items }: StatsBarProps) => {
 
   const stats = [
     { label: "Total Items", value: total, icon: Package, color: "text-primary" },
-    { label: "Available", value: available, icon: TrendingUp, color: "text-success" },
+    { label: "Available", value: available, icon: TrendingUp, color: "text-[hsl(var(--success))]" },
     { label: "Out of Stock", value: outOfStock, icon: AlertTriangle, color: "text-destructive" },
   ];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {stats.map((stat) => (
-        <div key={stat.label} className="glass-card p-5 flex items-center gap-4">
+        <div key={stat.label} className="glass-card p-5 flex items-center gap-4 transition-all duration-300 hover:shadow-md">
           <div className={`p-3 rounded-lg bg-muted ${stat.color}`}>
             <stat.icon className="w-5 h-5" />
           </div>
           <div>
-            <p className="text-sm text-muted-foreground">{stat.label}</p>
-            <p className="text-2xl font-bold">{stat.value}</p>
+            <p className="text-sm text-muted-foreground font-display uppercase tracking-wider">{stat.label}</p>
+            <p className="text-2xl font-serif font-light tracking-wide">{stat.value}</p>
           </div>
         </div>
       ))}
