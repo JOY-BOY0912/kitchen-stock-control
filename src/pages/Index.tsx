@@ -9,19 +9,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-        <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-5 flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-primary/10">
-            <LayoutDashboard className="w-6 h-6 text-primary" />
+        <header className="border-b border-border/40 sticky top-0 z-10" style={{ background: 'linear-gradient(135deg, hsl(155 30% 42%), hsl(160 35% 34%), hsl(155 38% 26%))' }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex items-center gap-3">
+          <div className="p-2.5 rounded-lg bg-white/15">
+            <LayoutDashboard className="w-6 h-6 text-white/90" />
           </div>
           <div>
-            <h1 className="text-xl font-serif font-light text-foreground tracking-wide">Inventory Management</h1>
-            <p className="text-sm text-muted-foreground font-sans">Manage item availability</p>
+            <h1 className="text-xl font-serif font-light text-white tracking-wider">Inventory Management</h1>
+            <p className="text-sm text-white/70 font-display">Manage item availability</p>
           </div>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-10">
         {/* Loading */}
         {isLoading && (
           <div className="flex flex-col items-center justify-center py-32 gap-3">
