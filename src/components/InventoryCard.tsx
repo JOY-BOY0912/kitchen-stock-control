@@ -14,7 +14,7 @@ const InventoryCard = ({ item, onToggle, isToggling }: InventoryCardProps) => {
   const newStatus = isAvailable ? "Out of Stock" : "Available";
 
   return (
-    <div className="glass-card p-5 flex flex-col sm:flex-row sm:items-center gap-4 transition-all duration-200 hover:shadow-xl hover:shadow-black/30 hover:border-muted-foreground/20">
+    <div className="glass-card p-5 flex flex-col sm:flex-row sm:items-center gap-4 transition-all duration-300 hover:shadow-md hover:border-muted-foreground/20">
       {/* Icon */}
       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-muted flex items-center justify-center">
         <UtensilsCrossed className="w-6 h-6 text-muted-foreground" />
@@ -22,8 +22,8 @@ const InventoryCard = ({ item, onToggle, isToggling }: InventoryCardProps) => {
 
       {/* Info */}
       <div className="flex-1 min-w-0">
-        <h3 className="font-semibold text-foreground truncate">{item.food_item}</h3>
-        <p className="text-lg font-bold text-primary mt-0.5">
+        <h3 className="font-display text-foreground truncate">{item.food_item}</h3>
+        <p className="text-lg font-serif font-light text-primary mt-0.5">
           ${item.price.toFixed(2)}
         </p>
       </div>
@@ -44,7 +44,7 @@ const InventoryCard = ({ item, onToggle, isToggling }: InventoryCardProps) => {
           variant={isAvailable ? "destructive" : "default"}
           disabled={isToggling}
           onClick={() => onToggle({ id: item.id, status: newStatus })}
-          className="min-w-[140px] text-xs font-medium"
+          className="min-w-[140px] text-xs font-display uppercase tracking-wider transition-all duration-300"
         >
           {isToggling ? (
             <Loader2 className="w-4 h-4 animate-spin mr-1" />
